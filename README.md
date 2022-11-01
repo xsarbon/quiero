@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Tienda de electrónica, [Santucho Nicolas](https://www.linkedin.com/in/nicolas-santucho-50a881182/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción general proyecto.
+Proyecto creado con tecnologia [React.js](https://es.reactjs.org/), basada en JavaScript. 
 
-## Available Scripts
+Se trata de un E-commerce, con todo su apartado visual, desde animaciones pasando por la logica y validaciones minimas, hasta integracion con una base de datos, en este caso [Firebase de Google](https://firebase.google.com/?hl=es-419). Cuenta con productos subidos a la base de datos, con sus cantidades disponibles, identificadores, precios, y demas datos.
 
-In the project directory, you can run:
 
-### `npm start`
+### Estado del proyecto
+Este proyecto se encuentra actualmente en fase de desarrollo, con cambios planeados como integrar el boton de continuar compra directamente en el carrito al pasar por encima de el, integrar API de mercado pago para finalizar las transacciones, agregar una pagina de inicio de sesion para administrador donde podra realizar cambios, agregar o quitar productos de stock, modificar precios, verificar clientes, compras, etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###Requisitos de entorno de desarrollo
+>* [Visual Studio Code](https://code.visualstudio.com/)
+>* [Node.js](https://nodejs.org/es/)
+>* [Git](https://git-scm.com/downloads)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+###Instalacion y funcionamiento
+Esta guia funcionara unicamente si cumplimos con los requisitos de entorno antes mencionados.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Abrimos [VisualStudioCode](https://code.visualstudio.com/), hacemos click en Terminal>Nuevo terminal
 
-### `npm run build`
+2. Nos ubicamos en la carpeta donde querramos guardar el proyecto, nos movemos por carpeta con el comando "cd" seguido del nombre de la carpeta para entrar en la carpeta, para volver a la carpeta anterior escribimos "cd .." sin las comillas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Una vez ubicados en la carpeta de destino, escribimos el comando ```npx create-react-app nombre-de-app```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4.  Ahora en la misma terminal, escribimos el comando ```"git clone"``` seguido del [link del repositorio](https://github.com/xsarbon/coder-react), es decir, de esta manera ```git clone https://github.com/xsarbon/coder-react```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Ahora abrimos el explorador de archivos, entramos a la carpeta donde hicimos el clone, abrimos la carpeta ```coder-react``` y copiamos todos los archivos en la carpeta ```nombre-de-app```
 
-### `npm run eject`
+6. Desde la terminal de VSC (Visual Studio Code) nos movemos a la carpeta ```nombre-de-app```, y ejecutamos los siguiente comando: ```npm i react-router-dom```>```npm i react-router-dom```>```react-hook-form```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Bugs conocidos y posibles correcciones de errores
+* En el itemContainer al hacer click en "agregar al carrito", el producto no se agrega al carrito, esto pasa porque
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    1. El boton "Agregar al carrito" no tiene agregado ninguna logica.
+    2. En ese momento, los productos no cuentan con un "quantity", ya que se lo agregamos recien en el "itemCount".
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Al cambiar el tamaño de la pantalla a una resolucion menor a 1300px, en CSS se cuelga, ya que no cuenta con diseño responsive por el momento.
+* Al agregar x cantidad de productos al carrito, luego ir al carrito y despues volver a agregar mas cantidades de ese mismo producto, podemos ver el total de cantidades de ese producto en el arrito aunque hayamos superado la cantidad de stock disponible. Esto se debe a que el proyecto consulta al servidor unicamente cuando simulamos el proceso de enviar los datos al servidor.

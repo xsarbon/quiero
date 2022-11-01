@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 767px){
+    .nav{
+        background-color: #ff9a00;
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        box-shadow: 0px 0px 41px 4px rgba(0,0,0,0.32);
+        -webkit-box-shadow: 0px 0px 41px 4px rgba(0,0,0,0.32);
+        -moz-box-shadow: 0px 0px 41px 4px rgba(0,0,0,0.32);
+        z-index: 1;
+    }
+    .tamanio{
+        width: 90%;
+        height: 100%;
+        background-color: aliceblue;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .burger{
+        width: 60px;
+        height: 60px;
+        background-color: aqua;
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 2;
+        flex-wrap: nowrap;
+        transition: all 0.4s;
+    }
+    
+    .burger1, .burger2, .burger3{
+        width: 50px;
+        height: 8px;
+        background-color: #ff9a00;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+    .active .burger1{
+        width: 35px;
+        transform: translateX(-8px)translateY(7px) rotate(-30deg);
+        background-color: black;
+    }
+    .active .burger3{
+        width: 35px;
+        transform: translateX(-8px)translateY(-7px) rotate(30deg);
+        background-color: black;
+    }
+    .active .burger2{
+        background-color: black;
+    }
+
+    .logoContainer{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+    }
+    .titulo{
+        display: none;
+    }
+    .cartContainer{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+}
+
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+}
