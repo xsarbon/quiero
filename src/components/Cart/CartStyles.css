@@ -148,3 +148,8 @@ background-color: rgba(225, 225, 225, 0.633);
     text-decoration: none;
     color: black;
 }
+@media screen and (max-width: 767px){
+    .cart{
+        display: none;
+    }
+}

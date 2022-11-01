@@ -18,57 +18,71 @@
     .tamanio{
         width: 90%;
         height: 100%;
-        background-color: aliceblue;
         margin: auto;
         display: flex;
         justify-content: center;
     }
-    .burger{
-        width: 60px;
-        height: 60px;
-        background-color: aqua;
+    .toggle{
+        position: relative;
+        width: 70px;
+        height: 70px;
+        background: #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
         margin-top: auto;
         margin-bottom: auto;
-        border-radius: 6px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
         z-index: 2;
-        flex-wrap: nowrap;
-        transition: all 0.4s;
+        cursor: pointer;
     }
+    .toggle span{
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #1863ff;
+        border-radius: 4px;
+        transition: 0.5s;
+    }
+    .toggle span:nth-child(1){
+        transform: translateY(-15px);
+        width: 25px;
+        left: 15px;
     
-    .burger1, .burger2, .burger3{
-        width: 50px;
-        height: 8px;
-        background-color: #ff9a00;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 3px;
-        transition: all 0.5s;
     }
-    .active .burger1{
-        width: 35px;
-        transform: translateX(-8px)translateY(7px) rotate(-30deg);
-        background-color: black;
+    .toggle.active span:nth-child(1){
+    width: 40px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.125s;
+    background-color: red;
     }
-    .active .burger3{
-        width: 35px;
-        transform: translateX(-8px)translateY(-7px) rotate(30deg);
-        background-color: black;
+    .toggle span:nth-child(2){
+        transform: translateY(15px);
+        width: 15px;
+        left: 15px;
     }
-    .active .burger2{
-        background-color: black;
+    .toggle.active span:nth-child(2){
+        width: 40px;
+        transform: translateY(0px) rotate(315deg);
+        transition-delay: 0.25s;
+        background-color: red;
+        }
+    .toggle.active span:nth-child(3){
+        transform: translateX(60px);
     }
-
     .logoContainer{
         display: flex;
         flex-direction: row;
         margin: auto;
     }
     .logo{
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        z-index: 2;
+        margin-top: -40px;
     }
     .titulo{
         display: none;
@@ -76,6 +90,38 @@
     .cartContainer{
         display: none;
     }
+    .cartContainer{
+        display: flex;
+        flex-direction: column;
+        height: 2000px;
+        width: 80%;
+        background-color: #ff9a00;
+        justify-content: flex-start;
+        position: absolute;
+        position: fixed;
+        z-index: 1;
+        margin-left: -1500px;
+        padding-top: 120px;
+        transition: all 0.5s;
+    }
+    .etiqueta{
+        height: 50px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .activee {
+        margin-left: -152px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 

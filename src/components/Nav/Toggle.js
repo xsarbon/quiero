@@ -1,5 +1,7 @@
-const element = document.querySelector('#bur')
-element.addEventListener('click',myFunction)
-const myFunction=()=>{
-    element.classList.toggle("active")
+function myFunction() {
+    let menutoggle = document.querySelector('.toggle');
+    let menu = document.querySelector('.cartContainer');
+    menutoggle.classList.toggle('active')
+    menu.classList.toggle('activee')
 }
+export default myFunction
