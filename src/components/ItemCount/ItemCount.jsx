@@ -1,7 +1,7 @@
 /* Importamos los archivos a utilizar */
 import React from "react";
 import { useState } from "react";
-import './styles.css'
+import './ItemCountStyles.css'
 
 
 /* Declaramos la funcion ItemCount, que recibe product y onAdd */
@@ -40,8 +40,7 @@ function ItemCount({ product, onAdd }) {
                     restar();
                     aumentarStock();
                 }}>-</button>
-                <p>{count}</p>
-                <p>de<b> {countS}</b> disponible</p>
+                <p className="number">{count}</p>
                 <button className="aumentar" onClick={() => {
                     aumentar();
                     bajarStock();

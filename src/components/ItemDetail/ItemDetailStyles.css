@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*MOBILE*/
+@media screen and (max-width: 767px){
+    .itemDetail{
+        padding-top: 130px;
+        background-color: rgb(238, 238, 238);
+        text-align: center;
+    }
+    .imagenDetail{
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .producto{
+        text-align: start;
+        margin-left: 5%;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .description{
+        text-align: start;
+        margin-left: 5%;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .precio{
+        text-align: start;
+        margin: 10px auto 10px 5%;
+        font-size: 40px;
+    }
+}

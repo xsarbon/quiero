@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*MOBILE*/
+@media screen and (max-width: 767px){
+.main{
+    display: flex;
+    margin-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    }
+}

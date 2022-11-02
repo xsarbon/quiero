@@ -3,6 +3,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import { useCartContext } from "../../context/CartContext"
+import './ItemDetailStyles.css'
 
 
 /* Declaramos la funcion ItemDetail, pasandole por parametro la lista de productos */

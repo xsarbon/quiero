@@ -1,4 +1,5 @@
 import Item from '../item/item'
+import './ItemListStyles.css'
 
 /* Funcion que devuelve por cada producto un div con los parametros que utiliza */
 const ItemList = ({ listProduct }) => {

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 767px){
+    .link {
+        margin-top: 20px;
+        width: 284px;
+        height: 434px;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    .card{
+        width: 284px;
+        height: 434px;
+    }
+    .image{
+        width: 284px;
+        height: 284px;
+        border-radius: 10px 10px 0 0;
+    }
+    .containerBtn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 146px;
+    }
+    .productos{
+        color: rgb(45, 45, 45);
+    }
+    .precios{
+        font-size: 30px;
+        font-weight: 800;
+        color: rgb(45, 45, 45);
+        margin-bottom: 10px;
+    }
+}

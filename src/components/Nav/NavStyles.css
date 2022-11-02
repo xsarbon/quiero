@@ -20,7 +20,7 @@
         height: 100%;
         margin: auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
     .toggle{
         position: relative;
@@ -75,7 +75,8 @@
     .logoContainer{
         display: flex;
         flex-direction: row;
-        margin: auto;
+        margin: auto 80px auto 0;
+
     }
     .logo{
         width: 80px;
@@ -93,14 +94,14 @@
     .cartContainer{
         display: flex;
         flex-direction: column;
-        height: 2000px;
+        height: 100%;
         width: 80%;
         background-color: #ff9a00;
         justify-content: flex-start;
         position: absolute;
         position: fixed;
         z-index: 1;
-        margin-left: -1500px;
+        margin-left: -100%;
         padding-top: 120px;
         transition: all 0.5s;
     }
@@ -113,9 +114,10 @@
         cursor: pointer;
         font-size: 25px;
         font-weight: 400;
+        color: rgb(45, 45, 45);
     }
     .activee {
-        margin-left: -152px;
+        margin-left: -16%;
     }
     .links{
         display: flex;
