@@ -22,13 +22,13 @@ const Cart = () => {
                     <div className="container">
                         <div><h2 className="nameProd" >{prod.product}</h2></div>
                         <div className="containerPrice">
-                            <p className="priceProd" ><b>${prod.price + ''}</b> </p>
-                            <p className="quantityProd" >{prod.quantity} en carrito</p>
-                            <p className="pricePerProd"><b>${prod.quantity * prod.price}</b></p>
+                            <p className="priceProd" >Precio Unitario: <b>${prod.price + ''}.-</b> </p>
+                            <p className="quantityProd" >Catidad en carrito: <b>{prod.quantity}</b></p>
+                            <p className="pricePerProd">Precio total: <b>${prod.quantity * prod.price}.-</b></p>
                         </div>
                     </div>
                 </NavLink >
-                <div className="containerRemove"><button className="removerProd" onClick={() => removeProduct(prod.id)}>X</button></div>
+                <div className="containerRemove"><button className="removerProd" onClick={() => removeProduct(prod.id)}>Quitar del carrito</button></div>
             </div>
         </li>
 
@@ -38,17 +38,17 @@ const Cart = () => {
     /* Declaramos el priceTotal, donde mostraremos el precio total del carrito de compras del usuario, daremos opcion para borrar el carrito y para avanzar al formulario de pago */
     const priceTotal =
         <li className="priceTotal" >
-            <div className="price">
-                <h2 className="priceTotal">Total: ${totalPrice()}</h2>
-            </div>
-            <div className="clearCart">
-                <button className="cleanCart" onClick={(cleanCart)}>Borrar Carrito</button>
-            </div>
-            <div className="startBuy">
-                <NavLink to={"/formulario"}>
-                    <button className="starBuy">Pagar</button>
-                </NavLink>
-            </div>
+            <section className="price">
+                <h2 className="priceTotal">Total: $<b>{totalPrice()}</b></h2>
+            </section>
+
+            <section className="startBuy">
+                <NavLink className="starBuy" to={"/formulario"}>
+                    <button >Ir a Pagar</button>
+                </NavLink><section className="clearCart">
+                    <button className="cleanCart" onClick={(cleanCart)}>Vaciar Carrito</button>
+                </section>
+            </section>
         </li>
 
 
