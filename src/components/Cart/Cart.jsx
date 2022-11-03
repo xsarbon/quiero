@@ -39,7 +39,7 @@ const Cart = () => {
     const priceTotal =
         <li className="priceTotal" >
             <section className="price">
-                <h2 className="priceTotal">Total: $<b>{totalPrice()}</b></h2>
+                <h2 className="Total">Total: $<b>{totalPrice()}</b></h2>
             </section>
 
             <section className="startBuy">
@@ -53,9 +53,9 @@ const Cart = () => {
 
 
     /* En caso de que el carrito de compras este Vacio, mostraremos un mensaje alentando al cliente a realizar una compra y facilitandole la lista de productos */
-    const noProducts = <li className="priceTotal">
-        <div className="price">
-            <h2 className="pricetotal"> No hay productos en el carrito</h2>
+    const noProducts = <li className="noProducts">
+        <div className="noProds">
+            <h2 className="noProd"> No hay productos en el carrito</h2>
         </div>
         <div className="clearCart">
             <NavLink to={"/"}>

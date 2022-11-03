@@ -21,10 +21,9 @@ function App() {
             <Route path='/Cart' element={<Cart />} />
             <Route path='/Formulario' element={<Formulario />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </CartContextProvider>
-      <br /><br /><br /><br />
     </>
   )
 }

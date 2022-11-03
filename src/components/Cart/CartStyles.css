@@ -7,6 +7,8 @@
     .ListaProductos{
         padding-top:120px;
         background-color: rgb(238, 238, 238);
+        width: 90%;
+        margin: auto;
     }
     .containerProd{
         width: 90%;
@@ -71,7 +73,7 @@
         font-weight: 500;
         cursor: pointer;
     }
-    b{
+    .containerPrice b{
         font-weight: 800;
     }
     .priceTotal{
@@ -80,6 +82,7 @@
         margin: auto;
         list-style: none;
         color: rgb(45, 45, 45);
+        margin-bottom: 50px;
     }
     .price{
         width: 100%;
@@ -90,6 +93,7 @@
         margin: auto;
         text-align: center;
     }
+
     .starBuy button{
         margin-top: 10px;
         width: 100%;
@@ -111,5 +115,28 @@
         border-radius: 4px;
         color: white;
         cursor: pointer;
+    }
+    .inicio{
+        width: 60%;
+        margin-top: 30px;
+        height: 50px;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(0, 120, 207);
+        color: white;
+        font-size: 17px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .noProducts{
+        margin-bottom: 900px;
+        list-style: none;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .noProd{
+        padding-top: 10px;
     }
 }

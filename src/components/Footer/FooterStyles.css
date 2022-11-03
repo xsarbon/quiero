@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 767px){
+    .footer{
+        background-color: white;
+    }
+    .tamanioFoot{
+        width: 90%;
+        height: 130px;
+        margin: auto;
+    }
+    .containerFoot{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+    }
+    .logoFoot{
+        height: 80px;
+    }
+    .logoContainer{
+       margin: auto; 
+    }
+    .copy{
+        padding: 5px;
+        text-align: center;
+    }
+    .copyrigth{
+        align-content: center;
+    }
+    .comunic{
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    ion-icon{
+        height: 30px;
+        width: 30px;
+        color: #ff9a00;
+    }
+    .creador{
+        text-align: center;
+        color: rgba(44, 44, 44, 0.459);
+    }
+    .creador a{
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
