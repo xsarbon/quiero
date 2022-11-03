@@ -66,48 +66,48 @@ const Formulario = () => {
 
         /* Estructura HTML y JS que verifica si los datos ingresados se cumplen con los requisitos de seguridad */
         <div className="formPayment">
-            <h2>Formulario</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <h2 className="formulario">Formulario</h2>
+            <form className="formul" onSubmit={handleSubmit(onSubmit)}>
                 <div className="divForm">
-                    <label>Nombre</label>
-                    <input type="text" {...register('name', { required: true, maxLength: 15, minLength: 2 })} />
+                    <label className="name">Nombre</label>
+                    <input className="llenar" type="text" {...register('name', { required: true, maxLength: 15, minLength: 2 })} />
                     {errors.name?.type === 'required' && <p className="alerta">El campo es requerido</p>}
                     {errors.name?.type === 'maxLength' && <p className="alerta">El nombre de ser menor a 15 caracteres</p>}
                     {errors.name?.type === 'minLength' && <p className="alerta">El nombre de ser mayor a 2 caracteres</p>}
                 </div>
                 <div className="divForm">
-                    <label>Apellido</label>
-                    <input type="text" {...register('surname', { required: true, maxLength: 15, minLength: 2 })} />
+                    <label className="name">Apellido</label>
+                    <input className="llenar" type="text" {...register('surname', { required: true, maxLength: 15, minLength: 2 })} />
                     {errors.surname?.type === 'required' && <p className="alerta">El campo es requerido</p>}
                     {errors.surname?.type === 'maxLength' && <p className="alerta">El nombre de ser menor a 15 caracteres</p>}
                     {errors.surname?.type === 'minLength' && <p className="alerta">El nombre de ser mayor a 2 caracteres</p>}
                 </div>
                 <div className="divForm">
-                    <label>Email</label>
-                    <input type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
+                    <label className="name">Email</label>
+                    <input className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
                     {errors.email?.type === 'required' && <p className="alerta">El campo es requerido</p>}
                     {errors.email?.type === 'pattern' && <p className="alerta">El formato del email es incorrecto</p>}
                 </div>
                 <div className="divForm">
-                    <label>Direccion</label>
-                    <input type="text" {...register('adress', { required: true, minLength: 5 })} />
+                    <label className="name">Direccion</label>
+                    <input className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
                     {errors.adress?.type === 'required' && <p className="alerta">El campo es requerido</p>}
                     {errors.adress?.type === 'minLength' && <p className="alerta">La direccion debe contener al menos 5 caracteres</p>}
                 </div>
                 <div className="divForm">
-                    <label>Edad</label>
-                    <input required type="text" {...register('age', { required: true, validate: edadValidator })} />
+                    <label className="name">Edad</label>
+                    <input className="llenar" required type="text" {...register('age', { required: true, validate: edadValidator })} />
                     {errors.age && <p className="alerta">La edad debe estar entre 18 y 65 años</p>}
                 </div>
                 <div className="divForm">
-                    <label>Desea incluir el telefono ?</label>
+                    <label className="name">Desea incluir el telefono ?</label>
                     <input className="checkbox" type="checkbox" {...register('includeTel')} />
                 </div>
                 <div className="divForm">
                     {includeTel && (
-                        <div className="divForm telephone2">
-                            <label>Telefono</label>
-                            <input className="telephone" type="tel" {...register('telephone', { required: true, maxLength: 17, minLength: 9 })} />
+                        <div className="divForm">
+                            <label className="name">Telefono</label>
+                            <input className="l" type="tel" {...register('telephone', { required: true, maxLength: 17, minLength: 9 })} />
                             {errors.telephone?.type === 'required' && <p className="alerta">El campo es requerido</p>}
                             {errors.telephone?.type === 'maxLength' && <p className="alerta">El telefono debe ser menor a 17 caracteres</p>}
                             {errors.telephone?.type === 'minLength' && <p className="alerta">El telefono debe ser mayor a 9 caracteres</p>}

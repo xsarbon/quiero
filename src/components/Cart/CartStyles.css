@@ -5,7 +5,7 @@
 /*MOBILE*/
 @media screen and (max-width: 767px){
     .ListaProductos{
-        padding-top:40%;
+        padding-top:120px;
         background-color: rgb(238, 238, 238);
     }
     .containerProd{
@@ -60,7 +60,7 @@
         text-align: center;
     }
     .removerProd{
-        width: 60%;
+        width: 30%;
         height: 40px;
         margin-bottom: 10px;
         background-color: transparent;
@@ -69,6 +69,7 @@
         border-radius: 5px;
         color: white;
         font-weight: 500;
+        cursor: pointer;
     }
     b{
         font-weight: 800;
@@ -98,6 +99,7 @@
         background-color: rgb(0, 120, 207);
         border-radius: 4px;
         color: white;
+        cursor: pointer;
     }
     .cleanCart{
         margin-top: 10px;
@@ -108,5 +110,6 @@
         background-color: rgb(255, 38, 0);
         border-radius: 4px;
         color: white;
+        cursor: pointer;
     }
 }

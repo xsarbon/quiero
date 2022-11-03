@@ -1,14 +1,15 @@
 import { TailSpin } from 'react-loader-spinner'
+import './SpinnerStyles.css'
 
 const Spinner = () => {
     return (<div className="spinner">
         <TailSpin
-            height="80"
-            width="80"
-            color="#0061A2"
+            height="100"
+            width="100"
+            color="#9300e7"
             ariaLabel="Cargando"
             radius="1"
-            wrapperClass=""
+            wrapperClass="spinner"
             visible={true}
             className="spiner"
         />
