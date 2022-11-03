@@ -5,6 +5,7 @@ import Cart from './components/Cart/Cart.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { CartContextProvider } from "./context/CartContext"
 import Formulario from './components/Payment/Formulario';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='/Formulario' element={<Formulario />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </CartContextProvider>
       <br /><br /><br /><br />
     </>

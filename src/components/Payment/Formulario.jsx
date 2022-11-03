@@ -21,10 +21,7 @@ const Formulario = () => {
 
     /* Declaramos las funciones a utilizar de reack-hook-form y asignamos los valores por defecto que necesitamos*/
     const { register, handleSubmit, formState: { errors }, watch } = useForm({
-        defaultValues: {
-            email: '@gmail.com',
-            telephone: '+549'
-        }
+
     })
 
 
@@ -65,58 +62,71 @@ const Formulario = () => {
     return (
 
         /* Estructura HTML y JS que verifica si los datos ingresados se cumplen con los requisitos de seguridad */
-        <div className="formPayment">
-            <h2 className="formulario">Formulario</h2>
+        <section className="formPayment">
+            <h2 className="formulario">Formulario de compra</h2>
             <form className="formul" onSubmit={handleSubmit(onSubmit)}>
-                <div className="divForm">
-                    <label className="name">Nombre</label>
-                    <input className="llenar" type="text" {...register('name', { required: true, maxLength: 15, minLength: 2 })} />
-                    {errors.name?.type === 'required' && <p className="alerta">El campo es requerido</p>}
-                    {errors.name?.type === 'maxLength' && <p className="alerta">El nombre de ser menor a 15 caracteres</p>}
-                    {errors.name?.type === 'minLength' && <p className="alerta">El nombre de ser mayor a 2 caracteres</p>}
-                </div>
-                <div className="divForm">
-                    <label className="name">Apellido</label>
-                    <input className="llenar" type="text" {...register('surname', { required: true, maxLength: 15, minLength: 2 })} />
-                    {errors.surname?.type === 'required' && <p className="alerta">El campo es requerido</p>}
-                    {errors.surname?.type === 'maxLength' && <p className="alerta">El nombre de ser menor a 15 caracteres</p>}
-                    {errors.surname?.type === 'minLength' && <p className="alerta">El nombre de ser mayor a 2 caracteres</p>}
-                </div>
-                <div className="divForm">
-                    <label className="name">Email</label>
-                    <input className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
-                    {errors.email?.type === 'required' && <p className="alerta">El campo es requerido</p>}
-                    {errors.email?.type === 'pattern' && <p className="alerta">El formato del email es incorrecto</p>}
-                </div>
-                <div className="divForm">
-                    <label className="name">Direccion</label>
-                    <input className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
-                    {errors.adress?.type === 'required' && <p className="alerta">El campo es requerido</p>}
-                    {errors.adress?.type === 'minLength' && <p className="alerta">La direccion debe contener al menos 5 caracteres</p>}
-                </div>
-                <div className="divForm">
-                    <label className="name">Edad</label>
-                    <input className="llenar" required type="text" {...register('age', { required: true, validate: edadValidator })} />
-                    {errors.age && <p className="alerta">La edad debe estar entre 18 y 65 años</p>}
-                </div>
-                <div className="divForm">
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Nombre</label>
+                        <input className="llenar" type="text" {...register('name', { required: true, maxLength: 15, minLength: 2 })} />
+                    </section>
+                    {errors.name?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.name?.type === 'maxLength' && <p className="alerta">*El nombre de ser menor a 15 caracteres</p>}
+                    {errors.name?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 2 caracteres</p>}
+                </section>
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Apellido</label>
+                        <input className="llenar" type="text" {...register('surname', { required: true, maxLength: 15, minLength: 2 })} />
+                    </section>
+
+                    {errors.surname?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.surname?.type === 'maxLength' && <p className="alerta">*El nombre de ser menor a 15 caracteres</p>}
+                    {errors.surname?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 2 caracteres</p>}
+                </section>
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Email</label>
+                        <input className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
+                    </section>
+                    {errors.email?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.email?.type === 'pattern' && <p className="alerta">*El formato del email es incorrecto</p>}
+                </section>
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Direccion</label>
+                        <input className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
+                    </section>
+                    {errors.adress?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.adress?.type === 'minLength' && <p className="alerta">*La direccion debe contener al menos 5 caracteres</p>}
+                </section>
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Edad</label>
+                        <input className="llenar" required type="text" {...register('age', { required: true, validate: edadValidator })} />
+                    </section>
+                    {errors.age && <p className="alerta">*La edad debe estar entre 18 y 65 años</p>}
+                </section>
+                <section className="divForm">
                     <label className="name">Desea incluir el telefono ?</label>
                     <input className="checkbox" type="checkbox" {...register('includeTel')} />
-                </div>
-                <div className="divForm">
+                </section>
+                <section className="inputLabel">
                     {includeTel && (
-                        <div className="divForm">
-                            <label className="name">Telefono</label>
-                            <input className="l" type="tel" {...register('telephone', { required: true, maxLength: 17, minLength: 9 })} />
-                            {errors.telephone?.type === 'required' && <p className="alerta">El campo es requerido</p>}
-                            {errors.telephone?.type === 'maxLength' && <p className="alerta">El telefono debe ser menor a 17 caracteres</p>}
-                            {errors.telephone?.type === 'minLength' && <p className="alerta">El telefono debe ser mayor a 9 caracteres</p>}
-                        </div>
+                        <section className="inputLabel">
+                            <section className="divForm">
+                                <label className="name">Telefono</label>
+                                <input className="llenar" type="tel" {...register('telephone', { required: true, maxLength: 17, minLength: 9 })} />
+                            </section>
+                            {errors.telephone?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                            {errors.telephone?.type === 'maxLength' && <p className="alerta">*El telefono debe ser menor a 17 caracteres</p>}
+                            {errors.telephone?.type === 'minLength' && <p className="alerta">*El telefono debe ser mayor a 9 caracteres</p>}
+                        </section>
                     )}
-                </div>
-                <input className="submit" type="submit" value="Continuar con el pago" />
+                </section>
+                <input className="submit" type="submit" value="Finalizar pedido" />
             </form>
-        </div>
+        </section>
     )
 
 }

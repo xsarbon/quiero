@@ -9,11 +9,11 @@ function NavBar() {
     return (
         <section className='nav'>
             <section className='tamanio'>
-                <div className="toggle" onClick={myFunction}>
+                <section className="toggle" onClick={myFunction}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </section>
                 <section className='logoContainer'>
                     <NavLink to="/">
                         <img className='logo' src={logo} ></img>
