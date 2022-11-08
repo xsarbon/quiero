@@ -18,28 +18,28 @@ function NavBar() {
                     <NavLink to="/">
                         <img className='logo' src={logo} ></img>
                     </NavLink>
-                    <h1 className='titulo'>Tienda Mayorista</h1>
+                    <h1 className='titulo'>TIENDA MAYORISTA</h1>
                 </section>
 
                 <section className='cartContainer'>
                     <section className='links'>
                         <NavLink to="/">
-                            <button className='etiqueta' href="#">Inicio</button>
+                            <button className='etiqueta' >Inicio</button>
                         </NavLink>
                         <NavLink to="category/notebooks">
-                            <button className='etiqueta' href="#">Notebooks</button>
+                            <button className='etiqueta' >Notebooks</button>
                         </NavLink>
                         <NavLink to="category/celulares">
-                            <button className='etiqueta' href="#">Celulares</button>
+                            <button className='etiqueta' >Celulares</button>
                         </NavLink>
                         <NavLink to="category/audio">
-                            <button className='etiqueta' href="#">Audio</button>
+                            <button className='etiqueta' >Audio</button>
                         </NavLink>
                         <NavLink to="category/hogar">
-                            <button className='etiqueta' href="#">Hogar</button>
+                            <button className='etiqueta' >Hogar</button>
                         </NavLink>
                         <NavLink to="/cart">
-                            <button className='etiqueta' href="#">Carrito</button>
+                            <button className='etiqueta' >Carrito</button>
                         </NavLink>
                     </section>
                     <Cart className='carrito' />
