@@ -41,7 +41,7 @@
     }
     .itemAdd{
         border-style: none;
-        width: 300px;
+        width: 80%;
         height: 60px;
         margin: auto;
         font-size: 22px;
@@ -53,7 +53,7 @@
     }
     .irAlCarrito{
         border-style: none;
-        width: 300px;
+        width: 80%;
         height: 60px;
         margin: auto;
         margin-top: 10px;
@@ -63,5 +63,138 @@
         border-radius: 10px;
         cursor: pointer;
         margin-bottom: 20px;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .containerbtns{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        margin: 10px auto 20px auto;
+    }
+    .restar{
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        background-color: transparent;
+        border-color: rgb(51, 51, 51);
+        background-color: rgb(223, 223, 223);
+        border-radius: 9px;
+    }
+    .number{
+        font-size: 38px;
+        font-weight: 500;
+    }
+    .aumentar{
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+        background-color: transparent;
+        border-color: rgb(51, 51, 51);
+        background-color: rgb(223, 223, 223);
+        border-radius: 9px;
+    }
+    .itemAdd{
+        border-style: none;
+        width: 80%;
+        height: 70px;
+        margin: auto;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(0, 120, 207);
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .irAlCarrito{
+        border-style: none;
+        width: 80%;
+        height: 70px;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(0, 120, 207);
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+}
+
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .containerbtns{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        margin: 10px auto 20px auto;
+    }
+    .restar{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        background-color: transparent;
+        border-color: rgb(51, 51, 51);
+        background-color: rgb(223, 223, 223);
+        border-radius: 9px;
+    }
+    .number{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .aumentar{
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        background-color: transparent;
+        border-color: rgb(51, 51, 51);
+        background-color: rgb(223, 223, 223);
+        border-radius: 9px;
+    }
+    .itemAdd{
+        border-style: none;
+        width: 300px;
+        height: 55px;
+        margin: auto;
+        font-size: 16px;
+        color: white;
+        background-color: rgb(0, 120, 207);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: ease 0.2s;
+    }
+    .itemAdd:hover{
+        background-color: rgb(0, 97, 167);
+    }
+    .irAlCarrito{
+        border-style: none;
+        width: 300px;
+        height: 55px;
+        margin: auto;
+        font-size: 16px;
+        color: white;
+        background-color: rgb(0, 120, 207);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: ease 0.2s;
+        margin: 19.5% 0 0 20%;
     }
 }

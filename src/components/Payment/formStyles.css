@@ -6,7 +6,7 @@
 /*MOBILE*/
 @media screen and (max-width: 767px){
     .formPayment{
-        padding: 33% 0 20% 0;
+        padding: 120px 0 100px 0;
         width: 100%;
         height: 700px;
         align-items: center;
@@ -46,6 +46,110 @@
         background-color: #3483fa;
         color: white;
         cursor: pointer;
+    }
+    .alerta{
+        color: red;
+        font-size: 15px;
+        text-align: start;
+        font-weight: 500;
+    }
+}
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .formPayment{
+        padding: 120px 0 120px 0;
+        width: 100%;
+        height: 700px;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        background-color: rgb(238, 238, 238);
+    }
+    .formulario{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .formul{
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .divForm{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .name{
+        font-size: 23px;
+    }
+    .llenar{
+        width: 55%;
+    }
+    .submit{
+        margin-top: 20px;
+        width: 50%;
+        height: 40px;
+        border-style: none;
+        border-radius: 5px;
+        background-color: #3483fa;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .alerta{
+        color: red;
+        font-size: 15px;
+        text-align: start;
+        font-weight: 500;
+    }
+}
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .formPayment{
+        padding: 120px 0 120px 0;
+        width: 100%;
+        height: 700px;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        background-color: rgb(238, 238, 238);
+    }
+    .formulario{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .formul{
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .divForm{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .name{
+        font-size: 23px;
+    }
+    .llenar{
+        width: 55%;
+    }
+    .submit{
+        margin-top: 20px;
+        width: 50%;
+        height: 40px;
+        border-style: none;
+        border-radius: 5px;
+        background-color: #3483fa;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
     }
     .alerta{
         color: red;

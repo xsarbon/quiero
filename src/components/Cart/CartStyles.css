@@ -9,6 +9,10 @@
         background-color: rgb(238, 238, 238);
         width: 90%;
         margin: auto;
+        list-style: none;
+    }
+    .linkkk{
+        text-decoration: none;
     }
     .containerProd{
         width: 90%;
@@ -105,7 +109,7 @@
         color: white;
         cursor: pointer;
     }
-    .cleanCart{
+    .clearCart{
         margin-top: 10px;
         width: 100%;
         height: 30px;
@@ -138,5 +142,307 @@
     }
     .noProd{
         padding-top: 10px;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .ListaProductos{
+        padding-top:160px;
+        width: 90%;
+        margin: auto;
+    }
+    .linkkk{
+        text-decoration: none;
+        color: rgb(45, 45, 45);
+    }
+    .cartContain{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: auto;
+    }
+    .containerProd{
+        width: 40%;
+        height: 100%;
+        background-color: white;
+        list-style: none;
+        border-radius: 13px;
+        margin: 20px;
+        margin-left: 5.5%;
+    }
+    .imgProd{
+        width: 100%;
+        border-radius: 13px;
+        background-color: white;
+    }
+    .container{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nameProd{
+        margin-top: 10px;
+        font-size: 26px;
+        text-align: center;
+        color: rgb(45, 45, 45);
+        text-align: start;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .containerPrice{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 5px;
+        text-align: start;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .priceProd  {
+        color: rgb(45, 45, 45);
+        font-size: 23px;
+    }
+    .quantityProd{
+        color: rgb(45, 45, 45);
+        font-size: 23px;
+    }
+    .pricePerProd{
+        color: rgb(45, 45, 45);
+        font-size: 23px;
+    }
+    .containerRemove{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .removerProd{
+        width: 35%;
+        height: 40px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(255, 38, 0);
+        border-radius: 5px;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .containerPrice b{
+        font-weight: 800;
+    }
+    .priceTotal{
+        width: 90%;
+        background-color: white;
+        margin: auto;
+        list-style: none;
+        color: rgb(45, 45, 45);
+        margin-bottom: 50px;
+    }
+    .price{
+        width: 100%;
+        text-align: center;
+    }
+    .startBuy{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .starBuy button{
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(0, 120, 207);
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+    .clearCart{
+        margin-top: 10px;
+        width: 100%;
+        height: 30px;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(255, 38, 0);
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+    .inicio{
+        width: 60%;
+        margin-top: 30px;
+        height: 50px;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(0, 120, 207);
+        color: white;
+        font-size: 17px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .noProducts{
+        margin-bottom: 900px;
+        list-style: none;
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .noProd{
+        padding-top: 10px;
+    }
+}
+
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .ListaProductos{
+        padding-top: 150px;
+        width: 1000px;
+        margin: auto;
+        list-style: none;
+    }
+    
+    .containerMainProd{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: white ;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: ease 0.2s;
+    }
+    .containerMainProd:hover{
+        transform: scale(1.015);box-shadow: 0px 0px 34px -2px rgba(0,0,0,0.38);
+        -webkit-box-shadow: 0px 0px 34px -2px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 0px 34px -2px rgba(0,0,0,0.38);
+    }
+    .imgProd{
+        width: 20%;
+    }
+    .linkkk{
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+        margin: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        text-decoration: none;
+        color: rgb(45, 45, 45);
+    }
+    
+    .container{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        height: 100%;
+        margin-left: 10px;
+    }
+    .containerRemove{
+        width: 15%;
+        height: 140px;
+        align-items: center;
+        align-content: center;
+        margin: auto 10px auto auto;
+        text-align: center;
+    }
+    .removerProd{
+        height: 50px;
+        width: 100%;
+        color: white;
+        margin-top: 33%;
+        background-color: transparent;
+        border-style: none;
+        background-color: rgb(255, 38, 0);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .nameProd{
+        font-size: 30px;
+    }
+    .containerPrice{
+        text-align: start;
+    }
+    .priceProd{
+        font-size:22px;
+    }
+    .quantityProd{
+        font-size:22px;
+    }
+    .pricePerProd{
+        font-size:22px;
+    }
+    .priceTotal{
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+    }
+    .Total{
+        font-size: 30px;
+    }
+    .starBuy{
+        background-color: #3483fa;
+        margin-top: 5px;
+        color: white;
+        border-radius: 4px;
+        border-style: none;
+        width: 250px;
+        height: 35px;
+        cursor: pointer;
+        transition: ease 0.2s;
+    }
+    .starBuy:hover{
+        transform: scale(1.05);
+        background-color: #095fdf;
+    }
+    .clearCart{
+        background-color: rgb(255, 38, 0);
+        width: 250px;
+        height: 25px;
+        border-style: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        margin-top: 5px;
+        transition: ease 0.2s;
+    }
+    .clearCart:hover{
+        transform: scale(1.05);
+    }
+    .noProducts{
+        background-color: white;
+        border-radius: 8px;
+        text-align: center;
+        margin-bottom: 500px;
+    }
+    .noProd{
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+    .inicio{
+        width: 300px;
+        height: 40px;
+        background-color: rgb(0, 120, 207);
+        border-style: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        margin-bottom: 10px;
+        transition: ease 0.2s;
+    }
+    .inicio:hover{
+        transform: scale(1.05);
     }
 }

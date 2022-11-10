@@ -36,3 +36,86 @@
         padding-bottom: 20px;
     }
 }
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .itemDetail{
+        padding-top: 120px;
+        background-color: rgb(238, 238, 238);
+        text-align: center;
+    }
+    .imagenDetail{
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .producto{
+        text-align: start;
+        margin-left: 5%;
+        font-size: 45px;
+        margin-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+    .description{
+        text-align: start;
+        margin-left: 5%;
+        font-size: 35px;
+        margin-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+    .precio{
+        text-align: start;
+        margin: 10px auto 10px 5%;
+        font-size: 55px;
+        font-weight: 800;
+        color: rgb(45, 45, 45);
+    }
+    .detalles{
+        padding-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+}
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .itemDetail{
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+    .itemDetailContainer{
+        padding: 30px;
+        display: flex;
+        flex: row ;
+        background-color: white; 
+        border-radius: 10px;
+    }
+    .imagenDetail{
+        width: 450px;
+        background-color: white;
+        border-radius: 10px; 
+    }
+    .detalles{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        color: rgb(45, 45, 45);
+    }
+    .producto{
+        font-size: 30px;
+        color: rgb(45, 45, 45);
+    }
+    .description{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+    .precio{
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: rgb(45, 45, 45);
+    }
+}

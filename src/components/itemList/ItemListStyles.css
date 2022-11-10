@@ -13,3 +13,35 @@
     background-color: rgb(238, 238, 238);
     }
 }
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .main{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        padding-top: 90px;
+        padding-bottom: 60px;
+        background-color: rgb(238, 238, 238);
+        flex-wrap: wrap;
+        margin: 0 auto 0 auto;
+        justify-content: center;
+        }
+}
+
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .main{
+        width: 1200px;
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        padding-top: 110px;
+        padding-bottom: 60px;
+        background-color: rgb(238, 238, 238);
+        flex-wrap: wrap;
+        margin: 0 auto 0 auto;
+        justify-content: center;
+        transition: ease 0.2s;
+        }
+}

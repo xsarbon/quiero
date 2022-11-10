@@ -4,6 +4,20 @@ import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { NavLink } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import "./CartWidgetStyles.css"
+import { createTheme } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
+
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: purple[50],
+      },
+      secondary: {
+        main: '#e3f2fd',
+      },
+    },
+  });
 
 
 /* Declaracion de funcion Cart */
@@ -15,18 +29,18 @@ function Cart() {
 
 
     /* Mostramos la cantidad de productos seleccionados por el usuario en el icono de Cart en la barra de navegacion */
-    const showQuantity = cartList.length === 0 ? <p><b>0</b> productos</p> : <p className="totalQuantity">Productos <b>{totalQuantity()}</b></p>
+    const showQuantity = cartList.length === 0 ? <p className="totalQuantity"><b>0</b> productos</p> : <p className="totalQuantity">Productos <b>{totalQuantity()}</b></p>
 
-    const showTotalPrice = totalPrice() === 0 ? <p>$0,00</p> : <p className="totalPrice">${totalPrice()}</p>
+    const showTotalPrice = totalPrice() === 0 ? <p className="totalPrice">$0,00</p> : <p className="totalPrice">${totalPrice()}</p>
     /* Devuelve el icono del Cart con la cantidad de productos en carrito, y al hacer click en el Cart, lleva al usuario al detalle del carrito */
     return (
-        <NavLink to="/Cart" >
+        <NavLink className='cartWidgetLink' to="/Cart" >
             <section className="cartWidget">
                 <section className="data">
                     {showTotalPrice}
                     {showQuantity}
                 </section>
-                <ShoppingCartRoundedIcon className="cart" color="primary" fontSize="large" />
+                <ShoppingCartRoundedIcon className="cart" fontSize="medium" />
             </section>
         </NavLink>
     );

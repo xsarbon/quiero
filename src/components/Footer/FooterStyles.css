@@ -55,3 +55,121 @@
         font-weight: 700;
     }
 }
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .footer{
+        background-color: white;
+    }
+    .tamanioFoot{
+        width: 90%;
+        height: 130px;
+        margin: auto;
+    }
+    .containerFoot{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+    }
+    .logoFoot{
+        height: 80px;
+    }
+    .logoContainer{
+       margin: auto; 
+    }
+    .copy{
+        padding: 5px;
+        text-align: center;
+    }
+    .copyrigth{
+        align-content: center;
+        font-size: 23px;
+    }
+    .comunic{
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        font-size: 23px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    ion-icon{
+        height: 30px;
+        width: 30px;
+        color: #ff9a00;
+    }
+    .creador{
+        text-align: center;
+        color: rgba(44, 44, 44, 0.459);
+        font-size: 23px;
+    }
+    .creador a{
+        font-size: 23px;
+        text-decoration: none;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+}
+
+/*ESCRITORIO*/
+@media screen and (min-width:1024px){
+    .footer{
+        background-color: white;
+    }
+    .tamanioFoot{
+        width: 1000px;
+        height: 130px;
+        margin: auto;
+    }
+    .containerFoot{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+    }
+    .logoFoot{
+        height: 80px;
+    }
+    .logoContainer{
+       margin: auto; 
+    }
+    .copy{
+        padding: 5px;
+        text-align: center;
+    }
+    .copyrigth{
+        align-content: center;
+        font-size: 23px;
+    }
+    .comunic{
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        font-size: 23px;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    ion-icon{
+        height: 30px;
+        width: 30px;
+        color: #ff9a00;
+    }
+    .creador{
+        text-align: center;
+        color: rgba(44, 44, 44, 0.459);
+        font-size: 23px;
+    }
+    .creador a{
+        font-size: 23px;
+        text-decoration: none;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }  
+}

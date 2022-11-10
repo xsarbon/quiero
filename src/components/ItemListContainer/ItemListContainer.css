@@ -1,3 +1,15 @@
-.productsContainer{
-    padding-top: 60px;
+/*MOBILE*/
+@media screen and (max-width: 767px){
+    .productsContainer{
+        padding-top: 60px;
+
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width:767px) and (max-width:1023px){
+    .productsContainer{
+        padding-top: 60px;
+    }
+    
 }

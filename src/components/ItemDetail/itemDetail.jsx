@@ -31,8 +31,8 @@ const ItemDetail = ({ listProduct }) => {
 
     /* Devuelve codigo HTML mostrando los detalles del producto, y reemplaza el boton de 'Agregar al carrito' por el de 'Terminar mi compra', al hacer click en el mismo, redirigira al usuario a la pagina del detalle del carrito */
     return (
-        <div className="itemDetail">
-            <div className="itemDetailContainer">
+        <section className="itemDetail">
+            <section className="itemDetailContainer">
                 <img className="imagenDetail" src={listProduct.image} />
                 <section className="detalles">
                     <h2 className="producto">{listProduct.product}</h2>
@@ -46,9 +46,8 @@ const ItemDetail = ({ listProduct }) => {
                             : <ItemCount product={listProduct} onAdd={onAdd} />
                     }
                 </section>
-            </div>
-
-        </div>
+            </section>
+        </section>
     )
 }
 
