@@ -1,6 +1,5 @@
 /* Importamos la base de datos de firebase */
 import { db } from "../firebase/firebase"
-import { collection, addDoc, serverTimestamp, updateDoc, doc } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import { uploadFile } from "../firebase/firebase";
 import { useState } from "react";
@@ -28,8 +27,9 @@ const Admin = () => {
     return (
         <>
             <br /><br /><br /><br /><br /><br /><br />
-            <h1>hola mundo</h1>
+            <h1>Cargar producto</h1>
             <form onSubmit={handleSubmit}>
+
                 <input type="file" name="" id="" onChange={e => setfile(e.target.files[0])} />
                 <button>
                     Subir

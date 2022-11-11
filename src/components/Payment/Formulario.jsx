@@ -41,7 +41,6 @@ const Formulario = () => {
                     showConfirmButton: true,
                 })
                 cleanCart()
-
             })
 
 
@@ -119,6 +118,18 @@ const Formulario = () => {
                     </section>
                     {errors.email?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                     {errors.email?.type === 'pattern' && <p className="alerta">*El formato del email es incorrecto</p>}
+                </section>
+
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Tipo de vendedor</label>
+                        <select className="llenar" placeholder="Seleccione su tipo de vendedor">
+                            <option value="Vendedor ambulante">Vendedor ambulante</option>
+                            <option value="Ventas por Redes Sociales">Ventas por Redes Sociales</option>
+                            <option value="Local al publico">Local al publico</option>
+                            <option value="ShowRoom">ShowRoom</option>
+                        </select>
+                    </section>
                 </section>
 
                 <input className="submit" type="submit" value="Finalizar pedido" />
