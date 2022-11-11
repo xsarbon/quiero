@@ -67,7 +67,6 @@ export function CartContextProvider({ children }) {
     /* Funcion que borra todos los productos del carrito y del LS */
     const cleanCart = () => {
         setCartList([])
-        localStorage.clear()
     }
 
     /* Funcion que muestra la cantidad total de productos en carrito */

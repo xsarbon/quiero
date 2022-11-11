@@ -40,16 +40,9 @@ const Formulario = () => {
                     title: 'gracias por su compra, su ID de pago es ' + res.id,
                     showConfirmButton: true,
                 })
+                cleanCart()
 
             })
-
-        /* Funcion para actualizar el stock  */
-        const update = items.map((prod) => {
-            const updateStock = doc(db, "listProducts", prod.id)
-            const stock = prod.stock - prod.quantity
-            updateDoc(updateStock, { stock })
-
-        })
 
 
 
@@ -65,65 +58,69 @@ const Formulario = () => {
         <section className="formPayment">
             <h2 className="formulario">Formulario de compra</h2>
             <form className="formul" onSubmit={handleSubmit(onSubmit)}>
+
+
                 <section className="inputLabel">
                     <section className="divForm">
-                        <label className="name">Nombre</label>
-                        <input className="llenar" type="text" {...register('name', { required: true, maxLength: 15, minLength: 2 })} />
+                        <label className="name">Nombre y apellido</label>
+                        <input placeholder="escriba su nombre y apellido" className="llenar" type="text" {...register('name', { required: true, minLength: 5 })} />
                     </section>
                     {errors.name?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
-                    {errors.name?.type === 'maxLength' && <p className="alerta">*El nombre de ser menor a 15 caracteres</p>}
-                    {errors.name?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 2 caracteres</p>}
+                    {errors.name?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 5 caracteres</p>}
                 </section>
-                <section className="inputLabel">
-                    <section className="divForm">
-                        <label className="name">Apellido</label>
-                        <input className="llenar" type="text" {...register('surname', { required: true, maxLength: 15, minLength: 2 })} />
-                    </section>
 
-                    {errors.surname?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
-                    {errors.surname?.type === 'maxLength' && <p className="alerta">*El nombre de ser menor a 15 caracteres</p>}
-                    {errors.surname?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 2 caracteres</p>}
-                </section>
+
                 <section className="inputLabel">
                     <section className="divForm">
-                        <label className="name">Email</label>
-                        <input className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
+                        <label className="name">Número de Teléfono</label>
+                        <input placeholder="número de contácto" className="llenar" type="number" {...register('telephone', { required: true, maxLength: 14, minLength: 9 })} />
                     </section>
-                    {errors.email?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
-                    {errors.email?.type === 'pattern' && <p className="alerta">*El formato del email es incorrecto</p>}
+                    {errors.telephone?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.telephone?.type === 'maxLength' && <p className="alerta">*El nombre debe ser menor a 15 caracteres</p>}
+                    {errors.telephone?.type === 'minLength' && <p className="alerta">*El telefono debe ser mayor a 8 caracteres</p>}
                 </section>
-                <section className="inputLabel">
-                    <section className="divForm">
-                        <label className="name">Direccion</label>
-                        <input className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
-                    </section>
-                    {errors.adress?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
-                    {errors.adress?.type === 'minLength' && <p className="alerta">*La direccion debe contener al menos 5 caracteres</p>}
-                </section>
-                <section className="inputLabel">
-                    <section className="divForm">
-                        <label className="name">Edad</label>
-                        <input className="llenar" required type="text" {...register('age', { required: true, validate: edadValidator })} />
-                    </section>
-                    {errors.age && <p className="alerta">*La edad debe estar entre 18 y 65 años</p>}
-                </section>
+
+
                 <section className="divForm">
-                    <label className="name">Desea incluir el telefono ?</label>
+                    <label className="name">Incluir documento ?</label>
                     <input className="checkbox" type="checkbox" {...register('includeTel')} />
                 </section>
+
+
                 <section className="inputLabel">
                     {includeTel && (
                         <section className="inputLabel">
                             <section className="divForm">
-                                <label className="name">Telefono</label>
-                                <input className="llenar" type="tel" {...register('telephone', { required: true, maxLength: 17, minLength: 9 })} />
+                                <label className="name">Número de DNI</label>
+                                <input placeholder="escriba su dni" className="llenar" type="number" {...register('dni', { required: true, maxLength: 9, minLength: 7 })} />
                             </section>
-                            {errors.telephone?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
-                            {errors.telephone?.type === 'maxLength' && <p className="alerta">*El telefono debe ser menor a 17 caracteres</p>}
-                            {errors.telephone?.type === 'minLength' && <p className="alerta">*El telefono debe ser mayor a 9 caracteres</p>}
+                            {errors.dni?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                            {errors.dni?.type === 'maxLength' && <p className="alerta">*El telefono debe ser menor a 10 caracteres</p>}
+                            {errors.dni?.type === 'minLength' && <p className="alerta">*El telefono debe ser mayor a 6 caracteres</p>}
                         </section>
                     )}
                 </section>
+
+
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Dirección</label>
+                        <input placeholder="dirección exacta para envío" className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
+                    </section>
+                    {errors.adress?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.adress?.type === 'minLength' && <p className="alerta">*La direccion debe contener al menos 5 caracteres</p>}
+                </section>
+
+
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Email</label>
+                        <input placeholder="escriba su email" className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
+                    </section>
+                    {errors.email?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.email?.type === 'pattern' && <p className="alerta">*El formato del email es incorrecto</p>}
+                </section>
+
                 <input className="submit" type="submit" value="Finalizar pedido" />
             </form>
         </section>

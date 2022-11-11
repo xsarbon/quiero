@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { CartContextProvider } from "./context/CartContext"
 import Formulario from './components/Payment/Formulario';
 import Footer from './components/Footer/Footer'
+import Admin from './components/Admin/Admin'
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
             <Route path="/category/:category" element={<ItemListContainer />} />
             <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="/product/:category.id" element={<ItemDetailContainer />} />
-            <Route path='/Cart' element={<Cart />} />
-            <Route path='/Formulario' element={<Formulario />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/formulario' element={<Formulario />} />
+            <Route path='/qtadmin-administrator-firebase' element={<Admin />} />
           </Routes>
           <Footer />
         </BrowserRouter>
