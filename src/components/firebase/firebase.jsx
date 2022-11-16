@@ -16,16 +16,9 @@ const firebaseConfig = {
     measurementId: "G-C53FFNK6DC"
 };
 
-//funcion para subir el archivo Bytes
-
-export async function uploadFile(file) {
-    const storageRef = ref(storage, v4() + file.name)
-    return await uploadBytes(storageRef, file)
-}
 
 
 
 // Inicializa Firebase
-const app = initializeApp(firebaseConfig);
-export const storage = getStorage(app);
+export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);

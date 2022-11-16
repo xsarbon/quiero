@@ -40,7 +40,7 @@ function Cart() {
                     {showTotalPrice}
                     {showQuantity}
                 </section>
-                <ShoppingCartRoundedIcon className="cart" fontSize="medium" />
+                <ion-icon className='cart' name="cart-outline"></ion-icon>
             </section>
         </NavLink>
     );

@@ -20,13 +20,13 @@ function Footer() {
                         <p className='comunication'>Tenés dudas ? <b className='escribinos'>Escribinos</b></p>
                         <section className='contact'>
                             <a href="#">
-                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                +54 9 381 642-0502
                             </a>
                             <a href="#">
-                                <ion-icon name="logo-whatsapp"></ion-icon>
+                                +54 9 381 642-0502
                             </a>
                             <a href="#">
-                                <ion-icon name="logo-instagram"></ion-icon>
+                                @quierotodotec
                             </a>
                         </section>
                     </section>

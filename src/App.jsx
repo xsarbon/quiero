@@ -7,6 +7,10 @@ import { CartContextProvider } from "./context/CartContext"
 import Formulario from './components/Payment/Formulario';
 import Footer from './components/Footer/Footer'
 import Admin from './components/Admin/Admin'
+import SubirProd from './components/Admin/SubirProd/SubirProd'
+import Categories from './components/Nav/Categories'
+import SubirCatalogo from './components/Admin/SubirCatalogo/SubirCatalogo'
+import DownloadCatalogo from './components/Admin/SubirCatalogo/DownloadCatalogo'
 
 function App() {
   return (
@@ -21,7 +25,11 @@ function App() {
             <Route path="/product/:category.id" element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/formulario' element={<Formulario />} />
-            <Route path='/qtadmin-administrator-firebase' element={<Admin />} />
+            <Route path='/qtadmin-administrator-firebase/' element={<Admin />} />
+            <Route path='/agregarprod' element={<SubirProd/>}/>
+            <Route path='/categories' element={<Categories/>}/>
+            <Route path='/subircatalogo' element={<SubirCatalogo />} />
+            <Route path='/downloadcatalogo' element={<DownloadCatalogo/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>

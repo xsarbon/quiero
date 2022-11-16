@@ -6,11 +6,8 @@ import { NavLink } from "react-router-dom"
 
 const Cart = () => {
     /* Importamos las funciones a utilizar desde el CartContext */
-    const { cartList, totalPrice, removeProduct, cleanCart, savePPP } = useCartContext()
+    const { cartList, totalPrice, removeProduct, cleanCart } = useCartContext()
 
-
-    /* Guardamos Product Per Product en LocalStorage */
-    savePPP(cartList)
 
 
     /* Mapeamos cartList y por cada producto devolvemos un codigo HTML dinamico con las propiedades de cada prod, y al hacer click en uno de los productos, lleva al usuario al detalle de ese producto */

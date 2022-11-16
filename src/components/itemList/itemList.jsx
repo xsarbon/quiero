@@ -5,7 +5,7 @@ import './ItemListStyles.css'
 const ItemList = ({ listProduct }) => {
     return (
         <div className='main'>
-            {listProduct.map(product => <Item key={product.id} product={product} stock={product.stock} initial={product.initial} />)}
+            {listProduct.map(product => <Item key={product.id} product={product} initial={product.initial} />)}
         </div>
     )
 }

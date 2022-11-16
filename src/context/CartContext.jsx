@@ -1,12 +1,6 @@
 import { createContext, useState, useContext } from "react"
 
-/* Local Storage (LS) */
-/* Funcion que guarda en LS todos los productos agregados al carrito "Producto por Producto" */
-const savePPP = (cartList) => {
-    for (const prod of cartList) {
-        localStorage.setItem(JSON.stringify(prod.id), JSON.stringify(prod))
-    }
-}
+
 
 /* Funcion que borra los datos guardados en LS */
 function clearLocal() {
@@ -82,8 +76,7 @@ export function CartContextProvider({ children }) {
             totalPrice,
             totalQuantity,
             cartList,
-            clearLocal,
-            savePPP
+            clearLocal
         }}>
             {children}
         </CartContext.Provider>

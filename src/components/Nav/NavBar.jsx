@@ -3,9 +3,12 @@ import './NavStyles.css';
 import Cart from '../CartWidget/Cart'
 import { NavLink } from "react-router-dom"
 import myFunction from './Toggle'
+import DownloadCatalogo from '../Admin/SubirCatalogo/DownloadCatalogo';
 
 function NavBar() {
     /* La funcion NavBar devuelve la sigueinte estructura */
+
+
     return (
         <section className='nav'>
             <section className='tamanio'>
@@ -39,9 +42,10 @@ function NavBar() {
                             <button className='etiqueta' >Hogar</button>
                         </NavLink>
                         <NavLink to="/cart">
-                            <button className='etiqueta' >Carrito</button>
+                            <button className='etiqueta' id='cartbtn' >Carrito</button>
                         </NavLink>
                     </section>
+                        
                     <Cart className='carrito' />
                 </section>
 
