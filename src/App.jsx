@@ -18,6 +18,7 @@ function App() {
       <CartContextProvider>
         <BrowserRouter>
           <NavBar />
+          <Categories />
           <Routes >
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />
@@ -26,10 +27,10 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='/formulario' element={<Formulario />} />
             <Route path='/qtadmin-administrator-firebase/' element={<Admin />} />
-            <Route path='/agregarprod' element={<SubirProd/>}/>
-            <Route path='/categories' element={<Categories/>}/>
+            <Route path='/agregarprod' element={<SubirProd />} />
+            <Route path='/categories' element={<Categories />} />
             <Route path='/subircatalogo' element={<SubirCatalogo />} />
-            <Route path='/downloadcatalogo' element={<DownloadCatalogo/>}/>
+            <Route path='/downloadcatalogo' element={<DownloadCatalogo />} />
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -319,5 +319,9 @@
     #cartbtn{
         display: none;
     }
+    .busqueda{
+        height: 30px;
+        margin: auto;
+    }
 }
 

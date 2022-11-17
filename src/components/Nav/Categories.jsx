@@ -1,11 +1,35 @@
-import {db} from '../firebase/firebase'
+import { db } from '../firebase/firebase'
 import { collection, getDocs } from "firebase/firestore";
-import {NavLink} from 'react-router-dom'
+import { useState, useEffect } from 'react';
 
 
-async function Categories(){
-    const refDocs=await getDocs (collection(db, 'categories'))
-    
+const Categories = () => {
+
+
+
+
+    const [personajes, setPersonajes] = useState([])
+    useEffect(() => {
+        consumirCategories()
+    }, [])
+
+    const consumirCategories = async () => {
+        const querySnapshot = await getDocs(collection(db, "categories"));
+        const category = querySnapshot.forEach((doc) => {
+            setPersonajes(personajes.push(doc.data().category))
+        });
+    }
+
+    return (
+        <>
+            <br /><br /><br /><br /><br /><br />
+            <button >Enviar</button>
+            {
+                console.log(personajes)
+            }
+        </>
+    )
+
 }
 
 export default Categories

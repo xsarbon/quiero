@@ -24,7 +24,7 @@ function ItemListContainer() {
     /* Funcion que apunta a nuestra base de datos y a la colleccion "listProducts" */
     const productsCollection = collection(db, 'listProducts')
 
-    /* Funcion que pregunta si la categoria la categoria es especificada */
+    /* Funcion que pregunta si la categoria es especificada */
     if (category) {
 
       /* Si la categoria es especificada, entonces mostrara todos los productos que el valor de category sea exactamente igual a la categoria pasada por parametro */
@@ -67,6 +67,7 @@ function ItemListContainer() {
   /* Esto devolverá la lista de productos filtrada o no por categoria, con un timeOut de 500ms */
   return (
     <div className="productsContainer">
+
       {!loading
         ?
         <ItemList listProduct={listProduct} />
