@@ -15,9 +15,15 @@ const Categories = () => {
 
     const consumirCategories = async () => {
         const querySnapshot = await getDocs(collection(db, "categories"));
-        const category = querySnapshot.forEach((doc) => {
-            setPersonajes(personajes.push(doc.data().category))
-        });
+        try {
+            querySnapshot.forEach((doc) => {
+                setPersonajes(personajes.push(doc.data()))
+            });
+        } catch {
+            console.log('imposible');
+        }
+
+
     }
 
     return (
