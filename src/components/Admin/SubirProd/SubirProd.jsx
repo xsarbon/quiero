@@ -1,6 +1,6 @@
 import {app,db} from '../../firebase/firebase'
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 import {v4}from 'uuid'
 import { useState } from 'react'
 import { useForm } from "react-hook-form";
@@ -32,9 +32,18 @@ const SubirProd = () => {
                 product:e.product, image:result, price:e.price, description:e.description, initial:1,category:e.category
             })
             const productsCategory = collection(db, "categories");
-            addDoc(productsCategory, {
-                category:e.category
+            const querySnapshot = await getDocs(productsCategory);
+
+            querySnapshot.forEach((i)=>{
+                if(i.data().category!=e.category){
+                    console.log(e.category);
+                }else{
+                    return console.log('hola2');
+                }
             })
+
+            let formul = document.getElementById('formul')
+            formul.reset() 
             
         }catch(error){
             console.log(error);
@@ -43,7 +52,7 @@ const SubirProd = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} >
+        <form id='formul' onSubmit={handleSubmit(onSubmit)} >
                     <br /><br /><br /><br /><br /><br /><br />
             <section>
                 <label className="name">Nombre de producto</label>

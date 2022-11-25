@@ -20,9 +20,7 @@ const Formulario = () => {
     const items = cartList
 
     /* Declaramos las funciones a utilizar de reack-hook-form y asignamos los valores por defecto que necesitamos*/
-    const { register, handleSubmit, formState: { errors }, watch } = useForm({
-
-    })
+    const { register, handleSubmit, formState: { errors }, watch } = useForm({})
 
 
     /* Funcion que guarda los datos de la compra y del cliente en la base de datos */

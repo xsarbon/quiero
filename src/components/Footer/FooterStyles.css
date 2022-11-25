@@ -1,175 +1,68 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-@media screen and (max-width: 767px){
-    .footer{
-        background-color: white;
-    }
-    .tamanioFoot{
-        width: 90%;
-        height: 130px;
-        margin: auto;
-    }
-    .containerFoot{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-    }
-    .logoFoot{
-        height: 80px;
-    }
-    .logoContainer{
-       margin: auto; 
-    }
-    .copy{
-        padding: 5px;
-        text-align: center;
-    }
-    .copyrigth{
-        align-content: center;
-    }
-    .comunic{
-        padding: 5px;
-        align-items: center;
-        text-align: center;
-    }
-    .contact{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .icono{
-        height: 30px;
-        width: 30px;
-        color: #ff9a00;
-    }
-    .creador{
-        text-align: center;
-        color: rgba(44, 44, 44, 0.459);
-    }
-    .creador a{
-        text-decoration: none;
-        font-weight: 700;
-    }
+body{
+    background-color: #ffffff;
 }
-
-/*TABLET*/
-@media screen and (min-width:767px) and (max-width:1023px){
-    .footer{
-        background-color: white;
-    }
-    .tamanioFoot{
-        width: 90%;
-        height: 130px;
-        margin: auto;
-    }
-    .containerFoot{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-    }
-    .logoFoot{
-        height: 80px;
-    }
-    .logoContainer{
-       margin: auto; 
-    }
-    .copy{
-        padding: 5px;
-        text-align: center;
-    }
-    .copyrigth{
-        align-content: center;
-        font-size: 23px;
-    }
-    .comunic{
-        padding: 5px;
-        align-items: center;
-        text-align: center;
-        font-size: 23px;
-    }
-    .contact{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .icono{
-        height: 30px;
-        width: 30px;
-        color: #ff9a00;
-    }
-    .creador{
-        text-align: center;
-        color: rgba(44, 44, 44, 0.459);
-        font-size: 23px;
-    }
-    .creador a{
-        font-size: 23px;
-        text-decoration: none;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
+#icon{
+    width: 25px;
+    height: 25px;
 }
-
-/*ESCRITORIO*/
-@media screen and (min-width:1024px){
-    .footer{
-        background-color: white;
-    }
-    .tamanioFoot{
-        width: 1000px;
-        height: 130px;
-        margin: auto;
-    }
-    .containerFoot{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        height: 100px;
-    }
-    .logoFoot{
-        height: 80px;
-    }
-    .logoContainer{
-       margin: auto; 
-    }
-    .copy{
-        padding: 5px;
-        text-align: center;
-    }
-    .copyrigth{
-        align-content: center;
-        font-size: 17px;
-    }
-    .comunic{
-        padding: 5px;
-        align-items: center;
-        text-align: center;
-        font-size: 15px;
-    }
-    .contact{
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-    }
-    ion-icon{
-        height: 30px;
-        width: 30px;
-        color: white;
-    }
-    .creador{
-        text-align: center;
-        color: rgba(44, 44, 44, 0.459);
-        font-size: 23px;
-    }
-    .creador a{
-        font-size: 23px;
-        text-decoration: none;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }  
+.footer{
+    padding-block:50px;
+    color: rgb(65, 65, 65);
+    font-weight: 400;
+}
+.footer_container{
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 15px;
+}
+.footer_top{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    row-gap: 20px;
+}
+.footer_title{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer_list-item{
+    list-style: none;
+}
+.footer_list-link{
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+.footer_list-link:hover{
+    color: #9300e7;
+}
+.footer_divider{
+    margin-block: 25px;
+    border: none;
+    border-top: 2px solid rgba(0,0,0,.1);
+}
+.footer_bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.footer_bottom .footer_list{
+    flex-direction: row;
+}
+#creator{
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+    font-weight: 500;
 }

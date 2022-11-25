@@ -37,31 +37,34 @@ function NavBar() {
                     </NavLink>
                     <h1 className='titulo'>TIENDA MAYORISTA</h1>
                 </section>
-                <Busqueda/>
+                <section className='cartContainer'>
+                        <NavLink className='etiqueta' to="/">
+                            <a className='log' >Inicio</a>
+                        </NavLink>
+                        
+                        <section className='etiqueta'>
+                            <a className='log' target={'_blank'} href="https://www.jupitertec.com.ar">Minorista</a>
+                        </section>
+                        
+
+                        <NavLink className='etiqueta' id='cartbtn' to="/cart">
+                            <a className='log'>Carrito</a>
+                        </NavLink>
+
+                        <section  className='etiqueta'>
+                        <a className='log' target={'_blank'} href="https://firebasestorage.googleapis.com/v0/b/quiero-todo-prueba.appspot.com/o/catalogo%2Fcatalogo?alt=media&token=834145ea-e715-4e78-afe0-95035c14309a">Catálogo</a>
+                        </section>
+                        
+
+                        <NavLink id='login' to="/cart" className='log'>
+                            <a className='etiqueta' >LogIn</a>  
+                        </NavLink>
+                        <Cart className='carrito' />
+                        
+                </section>
                 
             </section>
-            <section className='cartContainer'>
-                    <section className='links'>
-                        <NavLink to="/">
-                            <button className='etiqueta' >Inicio</button>
-                        </NavLink>
-
-                        <a className='etiqueta log' target={'_blank'} href="https://www.jupitertec.com.ar">Minorista</a>
-
-                        <NavLink to="/cart">
-                            <button className='etiqueta' id='cartbtn' >Carrito</button>
-                        </NavLink>
-
-                        <a className='etiqueta log' target={'_blank'} href="https://firebasestorage.googleapis.com/v0/b/quiero-todo-prueba.appspot.com/o/catalogo%2Fcatalogo?alt=media&token=834145ea-e715-4e78-afe0-95035c14309a">Catálogo</a>
-
-                        <NavLink to="/cart" className='log'>
-                            <button className='etiqueta' >LogIn</button>
-                        </NavLink>
-
-                    </section>
-                        
-                    <Cart className='carrito' />
-                </section>
+            
         </section >
     );
 }

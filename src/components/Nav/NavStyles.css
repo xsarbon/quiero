@@ -49,7 +49,6 @@
         width: 80%;
         background-color: #ff9a00;
         justify-content: flex-start;
-        position: absolute;
         position: fixed;
         z-index: 1;
         margin-left: -100%;
@@ -66,11 +65,19 @@
         font-size: 25px;
         font-weight: 400;
         color: rgb(45, 45, 45);
+        overflow: hidden;
+        text-decoration: none;
     }
     
-    .links{
+    .log{
         display: flex;
         flex-direction: column;
+        transform: translateX(25%);
+        color: rgb(20, 20, 20);
+        text-decoration: none;
+    }
+    #login{
+        display: none;
     }
     .activee {
         margin-left: -16%;
@@ -174,7 +181,6 @@
         width: 80%;
         background-color: #ff9a00;
         justify-content: flex-start;
-        position: absolute;
         position: fixed;
         z-index: 1;
         margin-left: -100%;
@@ -191,11 +197,19 @@
         font-size: 25px;
         font-weight: 400;
         color: rgb(45, 45, 45);
+        overflow: hidden;
+        text-decoration: none;
     }
     
-    .links{
+    .log{
         display: flex;
         flex-direction: column;
+        transform: translateX(25%);
+        color: rgb(20, 20, 20);
+        text-decoration: none;
+    }
+    #login{
+        display: none;
     }
     .activee {
         margin-left: -16%;
@@ -268,10 +282,10 @@
         z-index: 1;
     }
     .tamanio{
+        display: flex;
+        margin: auto;
         width: 1000px;
         height: 100%;
-        margin: auto;
-        display: flex;
         justify-content: space-between;
     }
     .toggle{
@@ -293,35 +307,47 @@
         font-size: 25px;
         margin-left: 10px;
         font-weight: 700;
-        color: rgb(45, 45, 45);
+        color: rgb(20, 20, 20);
     }
     .cartContainer{
         display: flex;
         flex-direction: row;
-        margin: auto
-    }
-    .links{
         width: 500px;
-        display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: auto;
         align-items: center;
     }
+    a{
+        text-decoration: none;
+    }
     .etiqueta{
-        width: 80px;
+        display: flex;
+        align-items: center;
+        width: 85px;
         height: 35px;
-        background-color: #a86500;
-        border-style: none;
+        background-color: #ffffff;
+        align-content: center;
+        border-radius: 3px;
+        font-weight: 600;
+        color: rgb(20, 20, 20);
+        text-decoration: none;
         cursor: pointer;
-        color: #fff;
-        font-weight: 500;
-        border-radius: 5px;
+        transition: ease 0.15s;
+    }
+    .etiqueta:hover{
+        background-color: #eeeeee;
+    }
+    .log{
+       margin: auto; 
+       font-weight: 600;
+       text-decoration: none;
+       color: rgb(20, 20, 20);
     }
     #cartbtn{
         display: none;
     }
-    .busqueda{
-        height: 30px;
-        margin: auto;
+    #login{
+        display: none;
     }
 }
 

@@ -7,10 +7,11 @@ import { db } from "../firebase/firebase"
 import { getDocs, collection, query, where } from "firebase/firestore"
 import Spinner from '../Spinner/Spinner'
 import './ItemListContainer.css'
+import Busqueda from "../Nav/Busqueda/Busqueda";
 
 /* Declaracion de ItemListContainer */
 function ItemListContainer() {
-
+  const {queri} = Busqueda()
 
   const [listProduct, setListProduct] = useState([])
   const [loading, setLoading] = useState(true)
