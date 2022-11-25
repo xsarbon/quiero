@@ -10,71 +10,53 @@ function Footer() {
                 <section className="footer_container">
                     <div className='footer_top'>
                         <div>
-                            <h6 className='footer_title'>Lorem ipsum dolor sit amet.</h6>
+                            <h6 className='footer_title'>Información.</h6>
                             <ul className='footer_list'>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Como comprar.</a>
                                 </li>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Garantía.</a>
                                 </li>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Quienes Somos.</a>
                                 </li>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Tienda Minorista.</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 className='footer_title'>Contacto.</h6>
+                            <ul className='footer_list'>
+                                <li className='footer_list-item'>
+                                    <a href="" className='footer_list-link'>WhatsApp.</a>
+                                </li>
+                                <li className='footer_list-item'>
+                                    <a href="" className='footer_list-link'>WhatsApp 2.</a>
+                                </li>
+                                <li className='footer_list-item'>
+                                    <a href="" className='footer_list-link'>Instagram.</a>
+                                </li>
+                                <li className='footer_list-item'>
+                                    <a href="" className='footer_list-link'>Dirección: 9 de Julio 79, San Miguel de Tucumán, Tucumán, Argentina.</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h6 className='footer_title'>Lorem ipsum dolor sit amet.</h6>
+                            <h6 className='footer_title'>Horarios.</h6>
                             <ul className='footer_list'>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Lunes a Viernes: 9 a 13 y 17 a 21.</a>
                                 </li>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Sabados: 10 a 14.</a>
                                 </li>
                                 <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
+                                    <a href="" className='footer_list-link'>Feriados: consultar.</a>
                                 </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h6 className='footer_title'>Lorem ipsum dolor sit amet.</h6>
-                            <ul className='footer_list'>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h6 className='footer_title'>Lorem ipsum dolor sit amet.</h6>
-                            <ul className='footer_list'>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
-                                <li className='footer_list-item'>
-                                    <a href="" className='footer_list-link'>Lorem ipsum dolor sit.</a>
-                                </li>
+
                             </ul>
                         </div>
 
