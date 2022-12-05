@@ -11,7 +11,7 @@ const Item = ({ product }) => {
     return (
         <NavLink className="link" to={`/product/${product.id}`}>
             <section className="card">
-                <img src={product.image} className="image"></img>
+                <img src={product.image} alt={product.alt} className="image"></img>
                 <section className="containerBtn">
                     <h2 className="productos">{product.product}</h2>
                     <h2 className="precios">${product.price}.-</h2>

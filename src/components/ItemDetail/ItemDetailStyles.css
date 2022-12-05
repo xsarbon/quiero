@@ -5,7 +5,7 @@
 /*MOBILE*/
 @media screen and (max-width: 767px){
     .itemDetail{
-        padding-top: 120px;
+        padding-top: 25px;
         background-color: rgb(238, 238, 238);
         text-align: center;
     }
@@ -17,30 +17,34 @@
     .producto{
         text-align: start;
         margin-left: 5%;
-        font-size: 35px;
+        font-size: 30px;
         margin-bottom: 20px;
+        color: rgb(28, 28, 28);
     }
     .description{
         text-align: start;
         margin-left: 5%;
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 20px;
+        color: rgb(28, 28, 28);
     }
     .precio{
         text-align: start;
         margin: 10px auto 10px 5%;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 800;
+        color: rgb(28, 28, 28);
     }
     .detalles{
         padding-bottom: 20px;
+        color: rgb(28, 28, 28);
     }
 }
 
 /*TABLET*/
 @media screen and (min-width:767px) and (max-width:1023px){
     .itemDetail{
-        padding-top: 120px;
+        padding-top: 25px;
         background-color: rgb(238, 238, 238);
         text-align: center;
     }
@@ -54,25 +58,25 @@
         margin-left: 5%;
         font-size: 45px;
         margin-bottom: 20px;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
     .description{
         text-align: start;
         margin-left: 5%;
         font-size: 35px;
         margin-bottom: 20px;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
     .precio{
         text-align: start;
         margin: 10px auto 10px 5%;
         font-size: 55px;
         font-weight: 800;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
     .detalles{
         padding-bottom: 20px;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
 }
 /*ESCRITORIO*/
@@ -81,7 +85,7 @@
         width: 1000px;
         height: 100%;
         margin: auto;
-        padding-top: 120px;
+        padding-top: 25px;
         padding-bottom: 30px;
     }
     .itemDetailContainer{
@@ -100,22 +104,25 @@
         height: 400px;
         display: flex;
         flex-direction: column;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
+        margin-left: 20px;
     }
     .producto{
         font-size: 30px;
-        color: rgb(45, 45, 45);
+        font-family: 'Roboto';
+        font-weight: 800;
+        color: rgb(28, 28, 28);
     }
     .description{
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 20px;
         margin-bottom: 20px;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
     .precio{
         font-size: 30px;
         font-weight: 800;
         margin-bottom: 20px;
-        color: rgb(45, 45, 45);
+        color: rgb(28, 28, 28);
     }
 }

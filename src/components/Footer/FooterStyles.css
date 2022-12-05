@@ -30,19 +30,24 @@ body{
     color: rgb(0, 0, 0);
     font-weight: 500;
     margin-bottom: 20px;
+    font-weight: 700;
+    color: rgb(65, 65, 65);
 }
 .footer_list{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transform: translateX(-30px);
 }
 .footer_list-item{
     list-style: none;
+    font-weight: 400;
+    color: rgb(45, 45, 45);
 }
 .footer_list-link{
     text-decoration: none;
     color: inherit;
-    transition: color .25s;
+    transition: color .17s;
 }
 .footer_list-link:hover{
     color: #9300e7;
@@ -65,4 +70,15 @@ body{
     text-decoration: none;
     color: rgb(65, 65, 65);
     font-weight: 500;
+}
+.hora{
+    list-style: none;
+    margin-left: 10px;
+    font-weight: 500;
+}
+#none{
+    text-decoration: none;
+    list-style: none;
+    
+    color: rgb(45, 45, 45);
 }

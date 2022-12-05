@@ -2,7 +2,7 @@ import NavBar from './components/Nav/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/itemDetailContainer'
 import Cart from './components/Cart/Cart.jsx'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"
 import { CartContextProvider } from "./context/CartContext"
 import Formulario from './components/Payment/Formulario';
 import Footer from './components/Footer/Footer'
@@ -11,14 +11,15 @@ import SubirProd from './components/Admin/SubirProd/SubirProd'
 import SubirCatalogo from './components/Admin/SubirCatalogo/SubirCatalogo'
 import DownloadCatalogo from './components/Admin/SubirCatalogo/DownloadCatalogo'
 import Selector from './components/FiltroCategories/Selector'
+import AllCollapseExample from './components/PreguntasFrecuentes/Preguntas'
 
 function App() {
   return (
     <>
       <CartContextProvider>
-        <BrowserRouter>
+        <HashRouter>
           <NavBar />
-          <Selector />
+          <Selector/>
           <Routes >
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:category" element={<ItemListContainer />} />
@@ -30,9 +31,10 @@ function App() {
             <Route path='/agregarprod' element={<SubirProd />} />
             <Route path='/subircatalogo' element={<SubirCatalogo />} />
             <Route path='/downloadcatalogo' element={<DownloadCatalogo />} />
+            <Route path='/preguntas-frecuentes' element={<AllCollapseExample/>}/>
           </Routes>
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
       </CartContextProvider>
     </>
   )

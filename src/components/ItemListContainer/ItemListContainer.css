@@ -1,7 +1,7 @@
 /*MOBILE*/
 @media screen and (max-width: 767px){
     .productsContainer{
-        padding-top: 60px;
+        padding-top: 20px;
 
     }
 }
@@ -9,7 +9,13 @@
 /*TABLET*/
 @media screen and (min-width:767px) and (max-width:1023px){
     .productsContainer{
-        padding-top: 60px;
+        padding-top: 20px;
     }
     
+}
+
+@media screen and (min-width:1024px){
+    .productsContainer{
+        padding-top: 0px;
+    }
 }

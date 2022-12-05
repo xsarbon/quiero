@@ -42,9 +42,16 @@ const Cart = () => {
             </section>
 
             <section className="startBuy">
-                <NavLink className="starBuy" to={"/formulario"}>
-                    <button className="starBuy">Ir a Pagar</button>
-                </NavLink>
+                {
+                    totalPrice()>=6999?
+                    <NavLink className="starBuy" to={"/formulario"}>
+                        <button className="starBuy">Ir a Pagar</button>
+                    </NavLink>:
+                    <NavLink className="starBuys" to={"/"}>
+                        <button className="starBuys">Compra minima $7500</button>
+                    </NavLink>
+                }
+                
                 <section className="">
                     <button className="clearCart" onClick={(cleanCart)}>Vaciar Carrito</button>
                 </section>

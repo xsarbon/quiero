@@ -36,7 +36,7 @@ function Cart() {
     return (
         <NavLink className='cartWidgetLink' to="/Cart" >
             <section className="cartWidget">
-                <section className="data">
+                <section id="data">
                     {showTotalPrice}
                     {showQuantity}
                 </section>
