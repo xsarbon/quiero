@@ -4,7 +4,9 @@ import { getFirestore } from "firebase/firestore"
 
 
 /* Declaramos las configuraciones de firebase */
+const firebaseConfig = {
 
+};
 
 
 // Inicializa Firebase
