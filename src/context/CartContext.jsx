@@ -3,7 +3,13 @@ import { createContext, useState, useContext } from "react"
 
 
 /* Funcion que borra los datos guardados en LS */
+function clearLocal() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let id = localStorage.key(i);
+        localStorage.removeItem(JSON.stringify(localStorage.key(i)))
+    }
 
+}
 
 
 
@@ -70,6 +76,7 @@ export function CartContextProvider({ children }) {
             totalPrice,
             totalQuantity,
             cartList,
+            clearLocal
         }}>
             {children}
         </CartContext.Provider>

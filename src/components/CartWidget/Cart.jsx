@@ -29,7 +29,7 @@ function Cart() {
 
 
     /* Mostramos la cantidad de productos seleccionados por el usuario en el icono de Cart en la barra de navegacion */
-    const showQuantity = cartList.length === 0 ? <p className="totalQuantity">productos <b>0</b></p> : <p className="totalQuantity">Productos <b>{totalQuantity()}</b></p>
+    const showQuantity = cartList.length === 0 ? <p className="totalQuantity">Productos <b>0</b></p> : <p className="totalQuantity">Productos <b>{totalQuantity()}</b></p>
 
     const showTotalPrice = totalPrice() === 0 ? <p className="totalPrice">$0,00</p> : <p className="totalPrice">${totalPrice()}</p>
     /* Devuelve el icono del Cart con la cantidad de productos en carrito, y al hacer click en el Cart, lleva al usuario al detalle del carrito */
@@ -37,8 +37,8 @@ function Cart() {
         <NavLink className='cartWidgetLink' to="/Cart" >
             <section className="cartWidget">
                 <section id="data">
-                    {showTotalPrice}
-                    {showQuantity}
+                    <p id="price">{showTotalPrice}</p>
+                    <p id="quantity">{showQuantity}</p>
                 </section>
                 <ion-icon id='cart' name="cart-outline"></ion-icon>
             </section>

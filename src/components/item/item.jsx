@@ -10,10 +10,10 @@ const Item = ({ product }) => {
     /* La cual devuelve una serie de etiquetas HTML dinamica por cada producto recibido, al hacerle click al producto, redirigira al usuario a la pagina de detalle de ese producto */
     return (
         <NavLink className="link" to={`/product/${product.id}`}>
-            <section className="card">
+            <section className="card"> 
                 <img src={product.image} alt={product.alt} className="image"></img>
                 <section className="containerBtn">
-                    <h2 className="productos">{product.product}</h2>
+                    <h2 className="productos">{product.product.toUpperCase()}</h2>
                     <h2 className="precios">${product.price}.-</h2>
                 </section>
             </section>

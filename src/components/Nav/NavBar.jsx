@@ -16,28 +16,22 @@ function NavBar() {
 
                 <section className='logoContainer'>
                     <NavLink to="/">
-                        <img className='logo' src={logo} ></img>
+                        <img className='logo' src={logo} />
                     </NavLink>
                     <h1 className='titulo'>TIENDA MAYORISTA</h1>
                 </section>
                 <section className='cartContainer'>
                         <NavLink className='etiqueta' to="/">
-                            <a className='log' >Inicio</a>
+                            <p className='log' >Inicio</p>
                         </NavLink>                        
 
-                        <NavLink className='etiqueta' id='cartbtn' to="/cart">
-                            <a className='log'>Carrito</a>
+                        <NavLink className='etiqueta' to="/cart">
+                            <p className='log'>Carrito</p>
                         </NavLink>
 
-                        <section  className='etiqueta'>
-                        <a className='log' target={'_blank'} href="https://firebasestorage.googleapis.com/v0/b/quierotodo-db.appspot.com/o/catalogo%2Fcatalogo?alt=media&token=d430a822-3310-4707-ba40-45adc1e04d6a">Catálogo</a>
-                        </section>
+                        <a className='etiqueta' target='_blank' rel='noreferrer' href="https://firebasestorage.googleapis.com/v0/b/quierotodo-db.appspot.com/o/catalogo%2Fcatalogo?alt=media&token=fff7979e-add4-4a6c-b9b0-f586f3a4684e"><p className='log'>Catálogo</p></a>
                         
-
-                        <NavLink id='login' to="/cart" className='log'>
-                            <a className='etiqueta' >LogIn</a>  
-                        </NavLink>
-                        <Cart className='carrito' />
+                        <Cart className='etiqueta' />
                         
                 </section>
                 

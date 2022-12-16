@@ -1,0 +1,58 @@
+@media screen and (max-width: 767px){
+    .NextPrev{
+        width: 90%;
+        margin: auto;
+    }
+    .pagina{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom:15px ;
+    }
+    .numer{
+        margin: auto;
+    }
+    
+}
+
+@media screen and (min-width:767px) and (max-width:1023px){
+    .NextPrev{
+        width: 90%;
+        margin: auto;
+    }
+    .pagina{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom:15px ;
+    }
+    .numer{
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+
+    .NextPrev{
+        padding-top: 15px;
+        width: 1000px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+
+    }
+    .pagina{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1000px;
+    }
+    .Next{
+        width: 70px;
+        height: 26px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+}

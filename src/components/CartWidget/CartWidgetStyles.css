@@ -2,55 +2,39 @@
     margin: 0;
     padding: 0;
 }
+
 .cartWidgetLink{
+    height: 60px;
+    margin: auto;
     text-decoration: none;
     color: rgb(20, 20, 20);
+    transition: ease .2s;
 }
 .cartWidgetLink:hover{
-    color: rgb(20, 20, 20);
+    background-color: #9300e7;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    height: 60px;
 }
 .cartWidget{
-    background-color: #ffffff;
-    padding: 5px;
-    width: 110px;
-    height: 35px;
     display: flex;
-    flex-direction: row;
+    margin: auto;
     justify-content: space-between;
-    text-align: start;
-    align-items: center;
-    border-radius: 3px;
-    margin-left: 3px;
-    transition: ease 0.15s;
-    color: rgb(20, 20, 20);
-}
-.cartWidget:hover{
-    background-color: #eeeeee;
-    color: rgb(20, 20, 20);
-}
-.totalQuantity{
-    text-decoration: none;
-    color: rgb(20, 20, 20);
-    font-weight: 800;
-}
-.totalPrice{    
-    text-decoration: none;
-    color: rgb(20, 20, 20);
-    font-weight: 800;
-    transform: translateY(15px);
 }
 #data{
-    font-size: 10px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: auto 5px auto 5px;
+}
+#price{
+    transform: translateY(7px);
+}
+#quantity{
+    transform: translateY(-9px);
 }
 #cart{
-    color: rgb(20, 20, 20);
-    width: 20px;
-    height: 20px;
+    font-size: 25px;
+    margin-top: 15px;
 }
+
 /*MOBILE*/
 @media screen and (max-width: 767px){
     .cartWidget{

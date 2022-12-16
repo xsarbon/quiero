@@ -11,13 +11,15 @@ import {NavLink} from 'react-router-dom'
 const Formulario = () => {
 
     /* Importamos las funciones necesarios desde el cartContext */
-    const { cartList, totalPrice, cleanCart } = useCartContext()
+    const { cartList, totalPrice, cleanCart,totalQuantity } = useCartContext()
 
     /* Declaramos la constante total y la igualamos a lo que devuelva la funcion totalPrice  */
     const total = totalPrice()
 
     /* Declaramos la constante items y la igualamos a lo que devuelva la funcion cartList  */
     const items = cartList
+
+    const quantity=totalQuantity()
 
     /* Declaramos las funciones a utilizar de reack-hook-form y asignamos los valores por defecto que necesitamos*/
     const { register, handleSubmit, formState: { errors }, watch } = useForm({})
@@ -27,7 +29,7 @@ const Formulario = () => {
     const onSubmit = (data) => {
         const salesCollection = collection(db, "salesClient");
         addDoc(salesCollection, {
-            data, total, items, date: serverTimestamp()
+            name:data.name,tipo:data.tipo,adress:data.adress,email:data.email,telephone:data.telephone,dni:data.dni, items, total,  date: serverTimestamp(), quantity,state:"prending"
         })
 
             /* Funcion que agradece al cliente y muestra por alert el ID de su compra */
@@ -63,7 +65,7 @@ const Formulario = () => {
                 <section className="inputLabel">
                     <section className="divForm">
                         <label className="name">Nombre y apellido</label>
-                        <input placeholder="escriba su nombre y apellido" className="llenar" type="text" {...register('name', { required: true, minLength: 5 })} />
+                        <input placeholder="Escriba su nombre y apellido" className="llenar" type="text" {...register('name', { required: true, minLength: 5 })} />
                     </section>
                     {errors.name?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                     {errors.name?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 5 caracteres</p>}
@@ -73,7 +75,7 @@ const Formulario = () => {
                 <section className="inputLabel">
                     <section className="divForm">
                         <label className="name">Número de Teléfono</label>
-                        <input placeholder="número de contácto" className="llenar" type="number" {...register('telephone', { required: true, maxLength: 14, minLength: 9 })} />
+                        <input placeholder="Número de contácto" className="llenar" type="number" {...register('telephone', { required: true, maxLength: 14, minLength: 9 })} />
                     </section>
                     {errors.telephone?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                     {errors.telephone?.type === 'maxLength' && <p className="alerta">*El nombre debe ser menor a 15 caracteres</p>}
@@ -92,7 +94,7 @@ const Formulario = () => {
                         <section className="inputLabel">
                             <section className="divForm">
                                 <label className="name">Número de DNI</label>
-                                <input placeholder="escriba su dni" className="llenar" type="number" {...register('dni', { required: false, maxLength: 9, minLength: 7 })} />
+                                <input placeholder="Escriba su dni" className="llenar" type="number" {...register('dni', { required: false, maxLength: 9, minLength: 7 })} />
                             </section>
                             {errors.dni?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                             {errors.dni?.type === 'maxLength' && <p className="alerta">*El DNI debe ser menor a 10 caracteres</p>}
@@ -105,7 +107,7 @@ const Formulario = () => {
                 <section className="inputLabel">
                     <section className="divForm">
                         <label className="name">Dirección</label>
-                        <input placeholder="dirección exacta para envío" className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
+                        <input placeholder="Dirección exacta para envío" className="llenar" type="text" {...register('adress', { required: true, minLength: 5 })} />
                     </section>
                     {errors.adress?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                     {errors.adress?.type === 'minLength' && <p className="alerta">*La direccion debe contener al menos 5 caracteres</p>}
@@ -115,7 +117,7 @@ const Formulario = () => {
                 <section className="inputLabel">
                     <section className="divForm">
                         <label className="name">Email</label>
-                        <input placeholder="escriba su email" className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
+                        <input placeholder="Escriba su email" className="llenar" type="text" {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i })} />
                     </section>
                     {errors.email?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
                     {errors.email?.type === 'pattern' && <p className="alerta">*El formato del email es incorrecto</p>}
