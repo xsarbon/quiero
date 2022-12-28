@@ -18,7 +18,6 @@ function ItemListContainer() {
   /* traemos category desde useParams de react-router-dom */
   const { category } = useParams()
   
-  const form=document.getElementById('form-cat');
 
 
   useEffect(() => {
@@ -28,7 +27,7 @@ function ItemListContainer() {
     if (category) {
 
       /* Si la categoria es especificada, entonces mostrara todos los productos que el valor de category sea exactamente igual a la categoria pasada por parametro */
-      const q = query(productsCollection, where('category', '==', `${category}`), orderBy('product'))
+      const q = query(productsCollection, where('category', '==', `${category}`))
       getDocs(q)
         .then((data) => {
           const list = data.docs.map((prod) => {
@@ -57,7 +56,6 @@ function ItemListContainer() {
           })
 
           setListProduct(list)
-          form.reset()
         })
         .finally(() => {
           setLoading(false)

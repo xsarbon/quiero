@@ -11,15 +11,14 @@ import {NavLink} from 'react-router-dom'
 const Formulario = () => {
 
     /* Importamos las funciones necesarios desde el cartContext */
-    const { cartList, totalPrice, cleanCart,totalQuantity } = useCartContext()
+    const { cartList, totalPrice, cleanCart, totalQuantity } = useCartContext()
 
     /* Declaramos la constante total y la igualamos a lo que devuelva la funcion totalPrice  */
     const total = totalPrice()
-
+    
+    const quantity=totalQuantity()
     /* Declaramos la constante items y la igualamos a lo que devuelva la funcion cartList  */
     const items = cartList
-
-    const quantity=totalQuantity()
 
     /* Declaramos las funciones a utilizar de reack-hook-form y asignamos los valores por defecto que necesitamos*/
     const { register, handleSubmit, formState: { errors }, watch } = useForm({})
@@ -29,7 +28,22 @@ const Formulario = () => {
     const onSubmit = (data) => {
         const salesCollection = collection(db, "salesClient");
         addDoc(salesCollection, {
-            name:data.name,tipo:data.tipo,adress:data.adress,email:data.email,telephone:data.telephone,dni:data.dni, items, total,  date: serverTimestamp(), quantity,state:"prending"
+            name:data.name,
+            telephone:data.telephone,
+            dni:data.dni,
+            adress:data.adress,
+            localidad:data.localidad,
+            total:data.total,
+            provincia:data.provincia,
+            email:data.email,
+            tipo:data.tipo,
+            nota:data.nota,
+            date:serverTimestamp(),
+            items:data.items,
+            quantity,
+            state:'pending',
+            total,
+            items
         })
 
             /* Funcion que agradece al cliente y muestra por alert el ID de su compra */
@@ -113,6 +127,23 @@ const Formulario = () => {
                     {errors.adress?.type === 'minLength' && <p className="alerta">*La direccion debe contener al menos 5 caracteres</p>}
                 </section>
 
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Localidad</label>
+                        <input placeholder="Localidad para envio" className="llenar" type="text" {...register('localidad', { required: true, minLength: 4 })} />
+                    </section>
+                    {errors.localidad?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.localidad?.type === 'minLength' && <p className="alerta">*La localidad debe ser de al menos 4 letras</p>}
+                </section>
+
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Provincia</label>
+                        <input placeholder="Provincia de residencia" className="llenar" type="text" {...register('provincia', { required: true, minLength: 5 })} />
+                    </section>
+                    {errors.provincia?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.provincia?.type === 'minLength' && <p className="alerta">*Debe escribir al menos 5 letras</p>}
+                </section>
 
                 <section className="inputLabel">
                     <section className="divForm">
@@ -133,6 +164,15 @@ const Formulario = () => {
                             <option value="ShowRoom">ShowRoom</option>
                         </select>
                     </section>
+                </section>
+
+                <section className="inputLabel">
+                    <section className="divForm">
+                        <label className="name">Notas de compra</label>
+                        <input placeholder="Escribe una nota" className="llenar" type="text" {...register('nota', { required: false })} />
+                    </section>
+                    {errors.name?.type === 'required' && <p className="alerta">*El campo es requerido</p>}
+                    {errors.name?.type === 'minLength' && <p className="alerta">*El nombre de ser mayor a 5 caracteres</p>}
                 </section>
 
                         {

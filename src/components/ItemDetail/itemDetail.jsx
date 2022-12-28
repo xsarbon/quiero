@@ -35,7 +35,7 @@ const ItemDetail = ({ listProduct }) => {
             <section className="itemDetailContainer">
                 <img className="imagenDetail" src={listProduct.image} />
                 <section className="detalles">
-                    <h2 className="producto">{listProduct.product.toUpperCase()}</h2>
+                    <h2 className="producto">{listProduct.product}</h2>
                     <p className="description">{listProduct.description}</p>
                     <h3 className="precio">${listProduct.price}</h3>
                     {
